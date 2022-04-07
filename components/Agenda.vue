@@ -46,19 +46,18 @@ export default {
           <td colspan="7">
             <b>Legenda:</b>
             <br>
-            A, B, C ... &#8680; Horários preenchidos; |
             Livre &#8680; Horários Vagos; |
-            -- &#8680; Horários indisponíveis;
+            -- &#8680; Horários preenchidos ou indisponíveis; 
           </td>
         </tfoot>
         <tbody>
           <tr>
             <th>07:00</th>
-            <td>Ocupado</td> <!-- Amaju -->
+            <td>--</td> <!-- Amaju -->
             <td>Livre</td>
-            <td>Ocupado</td> <!-- Amaju -->
+            <td>--</td> <!-- Amaju -->
             <td>Livre</td>
-            <td>Ocupado</td> <!-- Amaju -->
+            <td>--</td> <!-- Amaju -->
             <td>Livre</td>
           </tr>
           <tr>
@@ -66,17 +65,17 @@ export default {
             <td>Livre</td> 
             <td>Livre</td> 
             <td>Livre</td> 
-            <td>Ocupado</td> 
-            <td>Ocupado</td> 
             <td>Livre</td> 
+            <td>--</td> 
+            <td>--</td> 
           </tr>
           <tr>
             <th>09:00</th>
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> 
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> 
             <td>Livre</td> 
           </tr>
 
@@ -84,9 +83,9 @@ export default {
             <th>10:00</th> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
           </tr>
           <tr>
@@ -94,8 +93,8 @@ export default {
             <td>Livre</td> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td>
-            <td>Ocupado</td> <!-- Letícia Constantino -->
+            <td>--</td>
+            <td>--</td> <!-- Letícia Constantino -->
             <td>Livre</td>
           </tr>
           
@@ -126,19 +125,18 @@ export default {
           <td colspan="7">
             <b>Legenda:</b>
             <br>
-            A, B, C ... &#8680; Horários preenchidos; |
             Livre &#8680; Horários Vagos; |
-            -- &#8680; Horários indisponíveis;
+            -- &#8680; Horários preenchidos ou indisponíveis; 
           </td>
         </tfoot>
         <tbody>
           <tr>
             <th>07:00</th>
-            <td>Ocupado</td> <!-- Amaju -->
+            <td>--</td> <!-- Amaju -->
             <td>Livre</td>
-            <td>Ocupado</td> <!-- Amaju -->
+            <td>--</td> <!-- Amaju -->
             <td>Livre</td>
-            <td>Ocupado</td> <!-- Amaju -->
+            <td>--</td> <!-- Amaju -->
             <td>Livre</td>
           </tr>
           <tr>
@@ -146,17 +144,17 @@ export default {
             <td>Livre</td> 
             <td>Livre</td> 
             <td>Livre</td> 
-            <td>Ocupado</td> 
-            <td>Ocupado</td> 
             <td>Livre</td> 
+            <td>--</td> 
+            <td>--</td> 
           </tr>
           <tr>
             <th>09:00</th>
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> <!-- Haroldo -->
-            <td>Ocupado</td> 
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> <!-- Haroldo -->
+            <td>--</td> 
             <td>Livre</td> 
           </tr>
 
@@ -164,9 +162,9 @@ export default {
             <th>10:00</th> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
           </tr>
           <tr>
@@ -174,8 +172,8 @@ export default {
             <td>Livre</td> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td>
-            <td>Ocupado</td> <!-- Letícia Constantino -->
+            <td>--</td>
+            <td>--</td> <!-- Letícia Constantino -->
             <td>Livre</td>
           </tr>
           
@@ -204,9 +202,8 @@ export default {
           <td colspan="7">
             <b>Legenda:</b>
             <br>
-            A, B, C ... &#8680; Horários preenchidos; |
             Livre &#8680; Horários Vagos; |
-            -- &#8680; Horários indisponíveis;
+            -- &#8680; Horários preenchidos ou indisponíveis; 
           </td>
         </tfoot>
         <tbody>
@@ -216,7 +213,7 @@ export default {
             <td>Livre</td> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td> 
+            <td>--</td> 
             <td>Livre</td>
           </tr>
           <tr>
@@ -225,7 +222,7 @@ export default {
             <td>Livre</td> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
           </tr>
           <tr>
@@ -234,7 +231,7 @@ export default {
             <td>Livre</td> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
           </tr>
           <tr>
@@ -243,7 +240,7 @@ export default {
             <td>Livre</td> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
           </tr>
           <tr>
@@ -251,8 +248,8 @@ export default {
             <td>Livre</td> 
             <td>Livre</td> 
             <td>Livre</td>
-            <td>Ocupado</td>
-            <td>Ocupado</td>
+            <td>--</td>
+            <td>--</td>
             <td>Livre</td>
           </tr>
           <tr>
@@ -260,8 +257,8 @@ export default {
             <td>Livre</td> 
             <td>Livre</td> 
             <td>Livre</td>
-            <td>Ocupado</td>
-            <td>Livre</td>
+            <td>--</td>
+            <td>--</td>
             <td>--</td>
           </tr>
           
@@ -290,9 +287,8 @@ export default {
           <td colspan="7">
             <b>Legenda:</b>
             <br>
-            A, B, C ... &#8680; Horários preenchidos; |
             Livre &#8680; Horários Vagos; |
-            -- &#8680; Horários indisponíveis;
+            -- &#8680; Horários preenchidos ou indisponíveis; 
           </td>
         </tfoot>
         <tbody>
@@ -302,8 +298,8 @@ export default {
             <td>Livre</td> 
             <td>Livre</td> 
             <td>Livre</td>
-            <td>Ocupado</td>
-            <td>Livre</td>
+            <td>--</td>
+            <td>--</td>
             <td>--</td>
           </tr>
           <tr>
@@ -311,26 +307,26 @@ export default {
             <td>Livre</td> 
             <td>Livre</td> 
             <td>Livre</td>
-            <td>Ocupado</td>
+            <td>Livre</td>
             <td>Livre</td>
             <td>--</td>
           </tr>
           <tr>
             <th>20:00</th>
-            <td>Ocupado</td> 
-            <td>Ocupado</td>
+            <td>--</td> 
+            <td>--</td>
             <td>Livre</td> 
-            <td>Ocupado</td>
+            <td>--</td>
             <td>Livre</td>
             <td>--</td>
           </tr>
           <tr>
             <th>21:00</th>
-            <td>Ocupado</td> 
-            <td>Ocupado</td> 
+            <td>--</td> 
+            <td>Livre</td> 
             <td>Livre</td>
             <td>Livre</td>
-            <td>Livre</td>
+            <td>livre</td>
             <td>--</td>
           </tr>
           
