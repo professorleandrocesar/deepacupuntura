@@ -68,7 +68,7 @@ export default {
             conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias 
             na MTC para podermos...
 
-            <a class='' href='/posts/lombalgia-tai-yang'> Veja mais</a>
+            <a class='' href='/blog/lombalgia-tai-yang'> Veja mais</a>
             
           </p>
           <br>
@@ -95,7 +95,7 @@ export default {
             conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias 
             na MTC para podermos...
 
-            <a href='/posts/lombalgia-tai-yang'> Veja mais</a>
+            <a href='/blog/lombalgia-tai-yang'> Veja mais</a>
             
           </p>
           <br>
@@ -120,7 +120,7 @@ export default {
             prática chinesa de acupuntura, a correspondência somatotópica
             de partes do corpo a partes específicas da orelha foi desenvolvido pela...
 
-            <a href='/posts/auriculoterapia-visao-oriental-ocidental'> Veja mais</a>
+            <a href='/blog/auriculoterapia-visao-oriental-ocidental'> Veja mais</a>
             
           </p>
           <br>

@@ -1,22 +1,45 @@
 <template>
-    <div class="nav-top-one"> 
-    <NuxtLink  to='/'>
-    <div class='logo'>
+  <div class='nav-two'>
+    <div>
       <div>
-        <img class='logoo' src="/img/MyLogoBold.svg" alt="">
+        <a @click="$router.go(-1)"><i class="fas main-l fa-arrow-left"></i></a>
       </div>
-      <div class='logo-name'>
-        <p class='deep'>
-          DEEP</p>
-        <p class='acupuntura'>
-          Acupuntura  
-        </p>
+      <div>
+        <nuxt-link to=""><i class="fa-solid fa-share-nodes"></i></nuxt-link>
+        <nuxt-link to=""><i class="fa-solid fa-bars"></i></nuxt-link>
       </div>
     </div>
-      <!-- <i class=" fas fasi-top"><img class='logoo' src="img/logoTwo.png" alt=""> Deep Acupuntura</i> -->
-    </NuxtLink>
   </div>
-</template>
 
-<style>
+</template>
+<style scoped>
+.nav-two {
+  height: 35px;
+  position: sticky;
+  top: -1px;
+  background: #860d0d;
+  border-radius: 0% 0% 10% 10%;
+  box-shadow: 0px .5px 5px #e23a2850;
+  z-index: 10;
+}
+
+.nav-two div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-two a {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 14px 0 6px;
+  font-size: 1.2em;
+}
+
+.nav-two i {
+  color: #dbd1d1;
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
 </style>
