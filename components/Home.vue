@@ -1066,8 +1066,6 @@ code {
   padding: 0 15px 0 0;
 }
 
-
-
 a.nuxt-link-exact-active {
   background-color: #e23a2890;
   color: #fff;
@@ -1086,22 +1084,22 @@ a.nuxt-link-exact-active {
 }
 
 .dot-index {
-  cursor: pointer;
-  transition: all .3s ease-in;
-    background-color: #d8d8d840;
-    margin: 10px 16px;
-    padding: 10px;
-    font-size: 1em;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5% 4% 15%;
-    border: solid .5px;
+cursor: pointer;
+transition: all .3s ease-in;
+  background-color: #d8d8d840;
+  margin: 10px 16px;
+  padding: 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5% 4% 15%;
+  border: solid .5px;
+}
 
-  }
-  .dot-index:Hover {
-    color: #fff;
-    border: solid .5px #e23a28;
-  }
+.dot-index:Hover {
+  color: #fff;
+  border: solid .5px #e23a28;
+}
 
 .dot-index {
   margin: 5px 10px;
@@ -1158,12 +1156,16 @@ a.nuxt-link-exact-active {
   font-weight: bold;
   color: #dbd1d1;
 }
+
 .homeTwo a {
 font-size: 1em;
-margin:auto;
+margin: auto;
 font-weight: bold;
 color: #dbd1d1;
+padding-right: 20px;
+padding-left: 20px;
 }
+
 .homeTwoDot:hover {
   text-shadow: -1px 1px 10px #fff;
   cursor: pointer;
