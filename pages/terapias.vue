@@ -31,7 +31,7 @@
 <script>
 export default {
     head: {
-        title: 'Deep Acupuntura',
+        title: 'Terapias | Deep Acupuntura',
         htmlAttrs: {
             lang: 'pt-br'
         },
@@ -272,7 +272,7 @@ code {
 .main-five-card {
     height: 370px;
     margin: 0 10px;
-    border: solid .5px #fadb4190;
+    border: solid .5px #e23a28;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;

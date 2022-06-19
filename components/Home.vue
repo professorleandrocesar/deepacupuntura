@@ -18,7 +18,7 @@
         <i class="fa-solid fa-location-dot"></i> Rua da Conceição, 125 - Centro - Niterói
       </a>
       <a href="https://agendamento.nextfit.com.br/74fb4384-512b-425d-9cc4-93d948554990">
-        <i class="fa-brands fa-whatsapp-square"></i> Agendar horário
+        <i class="fa-solid fa-calendar-plus"></i> Agendar horário
       </a>
     </div>
 
@@ -37,7 +37,23 @@
 
     <div class='main-tree'>
       <div>
-        <h5><i class="fa-solid fa-arrows-spin"></i> Indicações</h5>
+        <h5 class='hCincoOne'><i class="fa-solid fa-yin-yang"></i> Terapias</h5>
+      </div>
+    <div class='homeTwo'>
+              <div class='homeTwoDot' :class='{ selectTitle: aplicarAcu }'><nuxt-link to="/terapias">Acupuntura Sistêmica</nuxt-link> </div>
+              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Craniopuntura</nuxt-link> </div>
+              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Auriculoterapia</nuxt-link> </div>
+              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Ventosaterapia</nuxt-link> </div>
+              <!--
+              // <div @click='acupuntura()' class='homeTwoDot' :class='{ selectTitle: aplicarAcu }'>Acupuntura Sistêmica</div>
+              // <div @click='craniopuntura()' class='homeTwoDot' :class='{ selectTitle: aplicarCran }'>Craniopuntura</div>
+              // <div @click='auriculo()' class='homeTwoDot' :class='{ selectTitle: aplicarAur }'>Auriculoterapia</div>
+              // <div @click='ventosa()' class='homeTwoDot' :class='{ selectTitle: aplicarVen }'>Ventosaterapia</div>
+              -->
+            </div>
+                        <br>
+<div>
+        <h5 class='hCincoTwo'>Indicações</h5>
       </div>
       <div class='main-l-trat'>
               <h4 @click='ansiedade()' class='dot-index' :class='{ selectTitleHover: aplicar }'  v-html='rAnsiedade'></h4>
@@ -60,24 +76,34 @@
                   Distúrbios imunológicos -->
             </div>
     </div>
+ <div id='main-white'><br>
+        <h3 style='text-transform: uppercase;'>INAUGURADO em <br>- 13 de Março de 2022 -</h3>
+      <br>
+      </div>
+     
+     <div class='hr'></div>
+
+      <div class='main-tree'>
+      <div>
+        <h5><i class="fa-solid fa-circle-exclamation"></i> Localização</h5>
+      </div>
+    </div>
 
 
+    <div class='main-four'>
+      <div class='main-four-card'>
+        <p>
+        Endereço: Rua da Conceição, 125 - Center Offices - sala: 1005 <br> Centro - Niterói -RJ - CEP: 24020-085        </p>
+      </div>
+      <iframe class='body-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.5096784506004!2d-43.12292232898354!3d-22.89456440314661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983b5d0974f89%3A0xd5dcb4494da04cac!2sDeep%20Acupuntura!5e0!3m2!1spt-BR!2sbr!4v1647055905172!5m2!1spt-BR!2sbr" style="border:0;" margin="auto;" allowfullscreen="" loading="lazy"></iframe>
 
+    </div>
+     <div class='hr'></div>
 
-    <div class='homeTwo'>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarAcu }'><nuxt-link to="/terapias">Acupuntura Sistêmica</nuxt-link> </div>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Craniopuntura</nuxt-link> </div>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Auriculoterapia</nuxt-link> </div>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Ventosaterapia</nuxt-link> </div>
-              <!--
-              // <div @click='acupuntura()' class='homeTwoDot' :class='{ selectTitle: aplicarAcu }'>Acupuntura Sistêmica</div>
-              // <div @click='craniopuntura()' class='homeTwoDot' :class='{ selectTitle: aplicarCran }'>Craniopuntura</div>
-              // <div @click='auriculo()' class='homeTwoDot' :class='{ selectTitle: aplicarAur }'>Auriculoterapia</div>
-              // <div @click='ventosa()' class='homeTwoDot' :class='{ selectTitle: aplicarVen }'>Ventosaterapia</div>
-              -->
-            </div>
-            <br>
-    <div class='hr'></div>
+    <br>
+    <!--
+     <div class='hr'></div>
+     -->
     <br>
     <br>
     <br>
@@ -952,7 +978,25 @@ code {
 }
 
 .main-tree h5 {
+  margin-left: 10px;
+}
+
+.hCincoOne {
   margin: 10px 0px 22px 10px;
+}
+
+.hCincoTwo {
+  margin: -10px 0px 22px 10px;
+
+}
+
+#main-white {
+  position: static;
+  color: #fff;
+  background-color: #d8d8d840;
+  width: 100%;
+  margin: 30px auto 0px;
+  text-align: center;
 }
 
 .main-four {
@@ -961,9 +1005,7 @@ code {
   flex-direction: column;
   margin: -10px 0 0 0;
   color: #fff;
-  background: #860d0d;
   overflow-x: auto;
-  box-shadow: 0px 10px 20px #ffffff90;
 }
 
 .main-four i {
@@ -976,8 +1018,6 @@ code {
 }
 
 .main-four-card {
-  margin: -10px 0 10px 10px;
-  height: 50px;
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
@@ -1008,6 +1048,12 @@ code {
   font-size: .8em;
 }
 
+.body-map {
+  width: 300px;
+  height: 300px;
+  margin: 10px auto 30px auto;
+}
+
 .main-five {
   background: #860d0d;
   display: flex;
@@ -1031,7 +1077,7 @@ code {
 .main-five-card {
   height: 370px;
   margin: 0 10px;
-  border: solid .5px #fadb4190;
+  border: solid .5px #e23a2890;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -1075,7 +1121,7 @@ a.nuxt-link-exact-active {
 .main-l-trat {
   width: 95%;
   text-align: left;
-  margin:0px auto 20px auto;
+  margin: -10px auto 20px auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -1157,13 +1203,18 @@ transition: all .3s ease-in;
   color: #dbd1d1;
 }
 
+.homeTwo div {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
 .homeTwo a {
 font-size: 1em;
 margin: auto;
 font-weight: bold;
 color: #dbd1d1;
-padding-right: 20px;
-padding-left: 20px;
 }
 
 .homeTwoDot:hover {
@@ -1173,8 +1224,8 @@ padding-left: 20px;
 
 .hr {
   width: 95%;
-  border: solid .3px #92929240;
-  margin: auto;
+  border: solid .3px #e23a2840;
+  margin: 30px auto 0px auto;
 }
 
 @media only screen and (max-width: 369px) {}

@@ -29,7 +29,7 @@
 <script>
 export default {
   head: {
-    title: 'Professor | Leandro Cesar',
+    title: 'Crânioterapia| Terapias | Leandro Cesar',
     meta: [
       {
         hid: 'description',
@@ -541,7 +541,7 @@ padding: 0 15px 0 0;
   margin: -10px 0 0 0;
   color: #fff;  
   background-color: #860d0d;  
-  box-shadow: 0px 10px 5px #fadb41;
+  box-shadow: 0px 10px 5px #e23a28;
   overflow-x:auto;
   height: 500px;
   display: flex;

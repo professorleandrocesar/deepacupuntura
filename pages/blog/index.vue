@@ -1,20 +1,24 @@
 <template>
 <div id='app'>
-  <NavTop/>
-
+  <NavTopTwo/>
   <NavBottom/>
 
-      <div id="main">
-          <div class="main-c"><i class="fas fasi fa-file-invoice"></i></div>
-          <h1>Posts</h1>
-        <h3 class='main-l'>TCC e Artigos</h3>
+  <div class='main-tree'>
+      <div>
+        <h5><i class="fa-solid fa-blog"></i> Blog <br><br> TCC e Artigos</h5>
+      </div>
+    </div>
+
+      
         <div class='years'>
             <h4 @click='postOne' class='postTitle' :class='{ postTitleHover: aplicar }'>
-              A Acupuntura no Tratamento da Lombalgia Tai Yang: Revisão Bibliográfica
+              <i class="fas fa-chevron-right"></i> A Acupuntura no Tratamento da Lombalgia Tai Yang: Revisão Bibliográfica
             </h4>
             <div v-html='outputPostOne'></div>
+        
+            <br>
             <h4 @click='postTwo' class='postTitle' :class='{ postTitleHover: aplicarTwo }'>
-              Auriculoterapia: Uma Visão Geral dentro do Pensamento Oriental e Ocidental. 
+              <i class="fas fa-chevron-right"></i> Auriculoterapia: Uma Visão Geral dentro do Pensamento Oriental e Ocidental. 
             </h4>
             <div v-html='outputPostTwo'></div>
         <!--    <h4 @click='umSete' class='postTitle' :class='{ postTitleHover: aplicarTree }'>| 2017 |</h4>
@@ -26,7 +30,6 @@
         </div>
         <br>
         <br>
-      </div>
 
         <!-- <div>
           <span class="nav-in dois-vinte-um">2021</span> | <span class="nav-in dois-vinte">2022</span>
@@ -37,7 +40,7 @@
 <script>
 export default {
   head: {
-    title: 'Posts | Deep Acupuntura',
+    title: 'Blog | Deep Acupuntura',
     meta: [
       {
         hid: 'description',
@@ -237,18 +240,39 @@ export default {
 <style>
 .years {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    flex-flow: column wrap;
+    align-items: normal;
     justify-content:space-end;  
     align-self: center;
+    margin: 0 10px 0 10px;
+    font-size: .8em;
 }
 
 .years a{
   cursor: pointer;
 }
 .years h4 {
-  padding: 5px 5px;
+    font-size: 1.1em;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 970px) {
+  .years h4 {
+  }
+
+}
+
+.years div h4 {
+    font-size: 1.1em;
+  cursor: pointer;
+}
+
+.post {
+  color: #fff;
+}
+
+.post a{
+  color: #e23a28;
 }
 
 .postTitle {
@@ -256,6 +280,7 @@ export default {
 }
 
 .postTitle:hover {
+  color: e23a28;
   text-decoration: underline;
 }
 
@@ -266,5 +291,34 @@ export default {
 .postTitleHover:hover {
   text-decoration: none;
 
+}
+
+.main-tree {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 0px 0 0 0;
+  color: #fff;
+  background: #860d0d;
+  overflow-x: auto;
+}
+
+.main-tree i {
+  font-size: 1.2em;
+  color: #fff;
+
+}
+.main-tree p {
+  font-size: .8em;
+  color: #fff;
+  margin: 0px 0px 15px 30px;
+}
+
+.main-tree p i {
+  font-size: .8em;
+}
+
+.main-tree h5 {
+  margin: 10px 0px 15px 10px;
 }
 </style>

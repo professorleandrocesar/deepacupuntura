@@ -6,7 +6,7 @@
 
     <div class='main-tree'>
       <div>
-        <h5><i class="fa-solid fa-circle-exclamation"></i> Sobre <br><br> Deep Acupuntura</h5>
+        <h5><i class="fa-solid fa-house-medical-circle-exclamation"></i> Sobre <br><br> Deep Acupuntura</h5>
       </div>
     </div>
 
@@ -17,13 +17,14 @@
           Criado por Leandro Cesar Ramos da Costa, Deep Acupuntura é um clínica de medicina chinesa, para tratamento individualizado, que tem por objetivo tratar profundamente síndromes energéticas, através de sinais e sintomas de que o paciente relata e através de vários métodos de diagnósticos; podendo assim, traçar vários tipos de tratamentos, que só a medicina tradicional chinesa pode nos proporcionar, evitando a ingestão de medicamentos alopáticos, oferendo alternativas através de terapias totalmente seguras e naturais.
         </p>
       </div>
+      <br>
     </div>
 
     <div class='divider'></div>
     
     <div class='main-tree'>
       <div>
-        <h5><i class="fa-solid fa-circle-exclamation"></i> Localização</h5>
+        <h5><i class="fa-solid fa-map-location"></i> Localização</h5>
       </div>
     </div>
 
@@ -39,13 +40,36 @@
 
     <div class='divider'></div>
 
+
     <div class='main-tree'>
       <div>
-        <h5><i class="fa-solid fa-circle-exclamation"></i> Leandro Cesar Ramos da Costa</h5>
+        <h5><i class="fa-solid fa-people-group"></i> Profissionais
+        </h5>
+
+<div class='profile'>
+      <img src='img/myFotoTwo.jpg' alt='' class='mini-profile'>
+      <div>
+        <h1>Leandro Cesar Ramos da Costa</h1>
+        <h4> <i class="fa-solid fa-user-graduate"></i> Acupunturista</h4>
       </div>
     </div>
 
-    <div class='main-four'>
+<div class='main-one'>
+      <h4>
+        <i class="fa-solid fa-building"></i> Dono do Deep Acupuntura
+      </h4>
+      <a href="https://instagram.com/professorleandrocesar">
+        <i class="fa-brands fa-instagram-square"></i> Instagram
+      </a>
+      <a href="https://github.com/professorleandrocesar">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+    </div>
+      
+      </div>
+    </div>
+
+    <div class='main-five'>
     <p>
               <i class="fas fa-graduation-cap"></i> Graduação em Educação Física - UNIVERSIDADE SALGADO DE OLIVEIRA - UNIVERSO (2005 - 2008);
               <br>
@@ -57,8 +81,8 @@
               <br>
               <i class="fas fa-certificate graduando"></i> Pós-Graduando em Lesões e Doenças Musculoesqueléticas: Exercício Físico e Reabilitação - UNIVERSIDADE CASTELO BRANCO - UCB (2021 - atual);
             </p> 
-            <ul class="main-l">
               <h5>Técnicas Ministradas:</h5>
+            <p>
               <i class="fas fa-chevron-right"></i> Acupuntura Sistêmica 
               <br>
               <i class="fas fa-chevron-right"></i> Craniopuntura
@@ -67,13 +91,18 @@
               <br>
               <i class="fas fa-chevron-right"></i> Auriculoterapia 
 
-            </ul>       
-          <p class="nav-in"><i class="fas fa-link"></i> <a href="http://lattes.cnpq.br/3830820363501969" target="_blank">Currículo Lattes - CNPQ <i class="fas fa-external-link-alt"></i></a></p>
+            </p>       
+    <div class='main-tree'>
+      <p class="nav-in"><i class="fas fa-link"></i> <a href="http://lattes.cnpq.br/3830820363501969" target="_blank">Currículo Lattes - CNPQ <i class="fas fa-external-link-alt"></i></a></p>
+    </div>
           </div>
 
-          <h2 class="main-c">
-          Acontecimentos <br> | linha do tempo |
-        </h2>
+<div class='divider'></div>
+          <div class='main-tree'>
+      <div>
+        <h5><i class="fa-solid fa-timeline"></i> Acontecimentos - linha do tempo</h5>
+      </div>
+    </div>
         <div class='years'>
             <h4 class='dateYear'>|</h4>
             <h4 @click='doisDois' class='dateYear' :class='{ dateYearHover: aplicarTree }'>2022</h4>
@@ -89,10 +118,12 @@
             <h4 @click='oitoSeis' class='dateYear' :class='{ dateYearHover: aplicarSeven }'>| 1986 |</h4>
         -->    
         </div>
+        <div class='day-presents' v-html='acontecimentos'></div>
+          <div class='hr'></div>
         <br>
-        <div v-html='acontecimentos'></div>
           <br>
           <br>
+
           <br>
           <br>
 
@@ -122,7 +153,13 @@ export default {
       { rel: 'apple-touch-icon', size: '180x180', href: '/img/apple-touch-icon.png' },
       { rel: 'manifest', href: '/img/site.webmanifest' },
       { rel: 'mask-icon', href: '/img/safari-pinned-tab.svg', color: '#860d0d' }
-    ]
+    ],
+    mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 5500)
+    })
+  },
   },
   data() {
       return {
@@ -141,7 +178,7 @@ export default {
               <br>
             
           </p>
-          <br>
+
           <h4 style="text-align: left;"> Fevereiro</h4>
           <p class="main-l">
              <i class="fas fa-chevron-circle-right"></i> Conlusão do curso de Pós-Graduação Lato-sensu em Acupuntura - Universidade Celso Lisboa - UCL;
@@ -149,7 +186,7 @@ export default {
             <i class="fas fa-chevron-circle-right"></i> Finalizando o estágio em Acupuntura na Celso Lisboa - UCL;
             
           </p>
-          <br>
+    
           <h4 style="text-align: left;"> Janeiro</h4>
           <p class="main-l">
             <i class="fas fa-chevron-circle-right"></i> Curso de aprimoramento teórico e prático - Acupuntura Escalpiana de Jiao Shunfa;
@@ -180,7 +217,7 @@ export default {
               <br>
             
           </p>
-          <br>
+
           <h4 style="text-align: left;"> Fevereiro</h4>
           <p class="main-l">
              <i class="fas fa-chevron-circle-right"></i> Conlusão do curso de Pós-Graduação Lato-sensu em Acupuntura - Universidade Celso Lisboa - UCL;
@@ -188,7 +225,7 @@ export default {
             <i class="fas fa-chevron-circle-right"></i> Finalizando o estágio em Acupuntura na Celso Lisboa - UCL;
             
           </p>
-          <br>
+          
           <h4 style="text-align: left;"> Janeiro</h4>
           <p class="main-l">
             <i class="fas fa-chevron-circle-right"></i> Curso de aprimoramento teórico e prático - Acupuntura Escalpiana de Jiao Shunfa;
@@ -214,7 +251,7 @@ export default {
             <i class="fas fa-chevron-circle-right"></i> Início do curso de Pós-Graduação em Lesões e Doenças Musculoesqueléticas: Exercício Físico e Reabilitação - UCB;
             
           </p>
-          <br>
+      
         <h4 style="text-align: left;"> Fevereiro</h4>
           <p class="main-l">
              <i class="fas fa-chevron-circle-right"></i> Início do curso de Pós-Graduação em Cinesiologia, Biomecânica e Treinamento Físico - UCB;     
@@ -370,7 +407,7 @@ code {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  padding: 20px 0 5px 0;
+  padding: 0px 0 5px 0;
   margin-top: -10px;
 }
 
@@ -381,14 +418,14 @@ code {
 }
 
 .profile img {
-  height: 70px;
+  height: 60px;
   margin-left: 10px;
   padding: 0 25px 0 0;
 }
 
 .profile h1 {
-  margin: 13px 0 -5px -10px;
-  font-size: 1.5em;
+  margin: 16px 0 -5px -10px;
+  font-size: 1em;
   color: #fff;
 }
 
@@ -396,14 +433,15 @@ code {
   margin: 0 0 0 -10px;
   font-size: .9em;
   font-weight: 100;
-  color: #e23a28;
+  font-weight: bold;
 }
+
 
 .main-one {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 10px 0 15px 0;
+  padding: 5px 0 10px 0;
   box-shadow: 0px 10px 5px #ffffff90;
   background: #860d0d;
 }
@@ -412,25 +450,40 @@ code {
   margin: 0 0 0 15px;
 }
 
-.main-one a:nth-child(1) i,
-.main-one a:nth-child(2) i {
+.main-one a:nth-child() i,
+.main-one a:nth-child() i {
   padding-right: 3px;
   margin: 0 0 0 3px;
 }
 
-.main-one a:nth-child(2) i {
+.main-one a:nth-child() i {
   padding-right: 4px;
   margin: 0 0 0 4px;
 }
 
-.main-one a:nth-child(3) i {
+.main-one a:nth-child() i {
   margin: 0 0 0 3px;
   padding-right: 3px;
 }
 
 .main-one a {
+  line-height: 1.8;
   margin: 0 0 0 10px;
   color: #ddd;
+  font-size:.8em;
+  font-weight: bold;
+}
+
+.main-one h4 {
+  line-height: 1.8;
+  margin: 0 0 0 10px;
+  color: #ddd;
+  font-size:.8em;
+}
+
+.main-one a i {
+  
+  font-size:1.2em;
 }
 
 .main-two {
@@ -469,10 +522,20 @@ code {
 .main-tree i {
   font-size: 1.2em;
   color: #fff;
+
+}
+.main-tree p {
+  font-size: .8em;
+  color: #fff;
+  margin: 0px 0px 15px 30px;
+}
+
+.main-tree p i {
+  font-size: .8em;
 }
 
 .main-tree h5 {
-  margin: 10px 0px 22px 10px;
+  margin: 10px 0px 15px 10px;
 }
 
 .main-four {
@@ -482,11 +545,11 @@ code {
   margin: -10px 0 0 0;
   color: #fff;
   overflow-x: auto;
-  box-shadow: 0px 10px 10px #ffffff30;
+  box-shadow: 0px 10px 10px #ffffff80;
 }
 
 .main-four i {
-  font-size: 1.2em;
+  font-size: .8em;
   color: #555;
 }
 
@@ -532,23 +595,29 @@ code {
   flex-direction: column;
   margin: -10px 0 0 0;
   color: #fff;
-  box-shadow: 0px 10px 10px#bbb;
+  box-shadow: 0px 10px 10px #ffffff80;
   overflow-x: auto;
 }
 
 .main-five i {
-  font-size: 1.2em;
-  color: #555;
+  font-size: 1em;
+  color: #fff;
+}
+
+.main-five p {
+  font-size: .8em;
+  color: #fff;
+  margin-left:10px;
 }
 
 .main-five h5 {
-  margin-left: 10px;
+  margin: 0px auto 0 10px;
 }
 
 .main-five-card {
   height: 370px;
   margin: 0 10px;
-  border: solid .5px #fadb4190;
+  border: solid .5px #e23a2890;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -576,17 +645,123 @@ code {
   font-size: .8em;
 }
 
+.main-six {
+  background: #860d0d;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: -10px 0 0 0;
+  color: #fff;
+  box-shadow: 0px 10px 10px#bbb;
+  overflow-x: auto;
+}
+
+.main-six i {
+  font-size: 1em;
+  color: #fff;
+}
+
+.main-six p {
+  font-size: .8em;
+  color: #fff;
+  margin-left:10px;
+}
+
+.main-six h5 {
+  margin: 0px auto 0 10px;
+}
+
+.main-six-card {
+  height: 370px;
+  margin: 0 10px;
+  border: solid .5px #e23a2890;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.main-six-card a {
+  border: solid .1px #dddddd54;
+  margin: 0px 5px 20px 10px;
+  width: 500px;
+  border-radius: 3% 3% 3% 3%;
+}
+
+.main-six-card span {
+  position: relative;
+  top: -6px;
+  left: -14px;
+}
+
+.main-six-card h4 {
+  margin: 0 5px 0 10px;
+}
+
+.main-six-card p {
+  margin: 0 0 0 10px;
+  font-size: .8em;
+}
+
 .mini-profile {
-  height: 25px;
+  height: 55px;
   border-radius: 50%;
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 30px;
   padding: 0 15px 0 0;
 }
 
 .body-map {
   width: 300px;
   height: 300px;
-  margin: 10px auto 100px auto;
+  margin: 10px auto 50px auto;
+}
+.years {
+   display: flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   justify-content:flex-start;
+   align-self: center;
+   overflow-x: auto;
+ }
+
+ .years h4 {
+   padding: 5px 5px;
+}
+
+.dateYear {
+  color: #d8d8d880;
+  cursor: pointer;
+ 
+ }
+
+ .dateYearHover {
+   color: #e23a28;
+ }
+.years {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-end;
+  align-self: center;
+}
+
+.years a {
+  cursor: pointer;
+}
+
+.years h4 {
+  padding: 5px 5px;
+  cursor: pointer;
+}
+.day-presents {
+  color: #fff;
+  font-size: .8em;
+  margin: -10px 20px 0 10px;
+}
+
+.hr {
+  width: 95%;
+  border: solid .3px #e23a2840;
+  margin: 30px auto 0px auto;
 }
 
 a.nuxt-link-exact-active {

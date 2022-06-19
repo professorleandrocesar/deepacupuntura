@@ -2,6 +2,14 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   telemetry: false,
+  loading: {
+    background: '#860d0d',
+    color: '#e23a28',
+    height: '5px',
+    continuous: true,
+    duration: 3000
+  },
+  
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -41,7 +49,8 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/normalize.css',
-    '@/assets/style.css'
+    '@/assets/style.css',
+    '@/assets/main.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

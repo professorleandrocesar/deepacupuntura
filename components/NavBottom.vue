@@ -14,7 +14,7 @@
         <h5>BLOG</h5>
       </NuxtLink>
       <NuxtLink to='/sobre'>
-        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-house-medical-circle-exclamation"></i>
         <h5>SOBRE</h5>
       </NuxtLink>
     </div>

@@ -512,7 +512,7 @@ code {
   padding: 0 0 15px 0;
   color: #fff;
   background-color: #860d0d;
-  box-shadow: 0px 10px 5px #fadb41;
+  box-shadow: 0px 10px 5px #e23a28;
   overflow-x: auto;
   display: flex;
   justify-content: flex-start;
