@@ -43,7 +43,7 @@ footer {
 }
 
 svg {
-  font-size: 0.8em;
+  font-size: 0.9em;
   text-align: center;
 }
 
@@ -137,7 +137,7 @@ footer a {
   }
 
   svg {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   footer h1 {

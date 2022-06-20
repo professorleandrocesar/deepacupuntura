@@ -246,7 +246,7 @@ code {
 
 .main-four-card p {
     margin: 0 0 0 10px;
-    font-size: .8em;
+    font-size: .9em;
 }
 
 .main-five {
@@ -297,7 +297,7 @@ code {
 
 .main-five-card p {
     margin: 0 0 0 10px;
-    font-size: .8em;
+    font-size: .9em;
 }
 
 .mini-profile {

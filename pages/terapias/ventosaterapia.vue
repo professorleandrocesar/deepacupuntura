@@ -523,7 +523,7 @@ code {
 .main-four p {
   padding: 0px;
   margin: 10px 0 10px 10px ;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .main-four .mini-profile {
@@ -540,7 +540,6 @@ padding: 0 15px 0 0;
   margin: -10px 0 0 0;
   color: #fff;  
   background-color: #860d0d;  
-  box-shadow: 0px 10px 5px #e23a28;
   overflow-x:auto;
   height: 500px;
   display: flex;
@@ -588,7 +587,7 @@ padding: 0 15px 0 0;
 .main-five p {
   padding: 0px;
   margin: 10px 0 10px 10px ;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .main-five .mini-profile {

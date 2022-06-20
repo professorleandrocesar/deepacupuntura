@@ -257,9 +257,6 @@ export default {
 }
 
 @media only screen and (min-width: 970px) {
-  .years h4 {
-  }
-
 }
 
 .years div h4 {

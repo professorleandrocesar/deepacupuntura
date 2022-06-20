@@ -470,7 +470,7 @@ code {
   line-height: 1.8;
   margin: 0 0 0 10px;
   color: #ddd;
-  font-size:.8em;
+  font-size:.9em;
   font-weight: bold;
 }
 
@@ -478,7 +478,7 @@ code {
   line-height: 1.8;
   margin: 0 0 0 10px;
   color: #ddd;
-  font-size:.8em;
+  font-size:.9em;
 }
 
 .main-one a i {
@@ -525,13 +525,13 @@ code {
 
 }
 .main-tree p {
-  font-size: .8em;
+  font-size: .9em;
   color: #fff;
   margin: 0px 0px 15px 30px;
 }
 
 .main-tree p i {
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .main-tree h5 {
@@ -549,7 +549,7 @@ code {
 }
 
 .main-four i {
-  font-size: .8em;
+  font-size: .9em;
   color: #555;
 }
 
@@ -585,7 +585,7 @@ code {
 
 .main-four-card p {
   margin: 0 0 0 10px;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .main-five {
@@ -605,7 +605,7 @@ code {
 }
 
 .main-five p {
-  font-size: .8em;
+  font-size: .9em;
   color: #fff;
   margin-left:10px;
 }
@@ -642,7 +642,7 @@ code {
 
 .main-five-card p {
   margin: 0 0 0 10px;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .main-six {
@@ -662,7 +662,7 @@ code {
 }
 
 .main-six p {
-  font-size: .8em;
+  font-size: .9em;
   color: #fff;
   margin-left:10px;
 }
@@ -699,7 +699,7 @@ code {
 
 .main-six-card p {
   margin: 0 0 0 10px;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .mini-profile {
@@ -754,7 +754,7 @@ code {
 }
 .day-presents {
   color: #fff;
-  font-size: .8em;
+  font-size: .9em;
   margin: -10px 20px 0 10px;
 }
 

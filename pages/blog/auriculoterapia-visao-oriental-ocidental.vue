@@ -100,7 +100,7 @@ export default {
       </h4>   
     <p style="margin-left: 10px; margin-right: 5px;">
 A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prática da moxabustão, acupuntura e da farmacologia natural cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias na MTC para podermos tratar patologias, como a teoria dos 5 Elementos, Princípio de Geração (Ciclo Sheng), Princípio de Controle (Dominância – Ciclo KE), a teoria Yin/Yang, teoria dos meridianos (canais de energia) e a teoria dos canais unitários. A dor lombar é o principal problema de saúde entre os países ocidentais industrializados e uma das principais causas de despesas médicas, ausência e incapacidade. Existem 4 métodos diagnósticos na MTC que são a inspeção, audição e olfação, anamnese e palpação de pulso e palpação. A lombalgia TaiYang precisa ser diferenciada da lombalgia da protusão e hérnia discais lombar, esta apresenta perda de força muscular, alteração da sensibilidade, hipotrofia dos músculos da perna e sinal positivo no Teste de Lasègue. Pela literatura relacionada à lombalgia Tai Yang, houve evidência consistente da relevância do tratamento da acupuntura para tal patologia, porém é sugestivo estudos mais aprofundados sobre o tema. Objetivos: identificar e diferenciar os diversos tipos de lombalgias dentro da visão ocidental e oriental e assim elaborar o tratamento ideal para os pacientes diagnosticados com Lombalgia TaiYang.    </p>
-    <p style="margin-left: 10px; margin-right: 5px; font-size:.8em;">
+    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
       ¹ Artigo - Revista Brasileira de Medicina Chinesa - Ano XI n° 34 pg.:26 a 28, ² Lucas Rocha Fiori Sobreira, Carla A. da S. M. Guimarães, Leandro César Ramos da Costa, Natália Paixão Santos da Silva, Patrique Machado de Sá - Formados em Acupuntura Pelo Centro Universitário Celso Lisboa; ³ Deborah Vieira Machado - Graduanda em Fisioterapia do Centro Universitário Celso Lisboa. 
     </p>         
           `,
@@ -118,7 +118,7 @@ A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prátic
       </h4>   
     <p style="margin-left: 10px; margin-right: 5px;">
 A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prática da moxabustão, acupuntura e da farmacologia natural cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias na MTC para podermos tratar patologias, como a teoria dos 5 Elementos, Princípio de Geração (Ciclo Sheng), Princípio de Controle (Dominância – Ciclo KE), a teoria Yin/Yang, teoria dos meridianos (canais de energia) e a teoria dos canais unitários. A dor lombar é o principal problema de saúde entre os países ocidentais industrializados e uma das principais causas de despesas médicas, ausência e incapacidade. Existem 4 métodos diagnósticos na MTC que são a inspeção, audição e olfação, anamnese e palpação de pulso e palpação. A lombalgia TaiYang precisa ser diferenciada da lombalgia da protusão e hérnia discais lombar, esta apresenta perda de força muscular, alteração da sensibilidade, hipotrofia dos músculos da perna e sinal positivo no Teste de Lasègue. Pela literatura relacionada à lombalgia Tai Yang, houve evidência consistente da relevância do tratamento da acupuntura para tal patologia, porém é sugestivo estudos mais aprofundados sobre o tema. Objetivos: identificar e diferenciar os diversos tipos de lombalgias dentro da visão ocidental e oriental e assim elaborar o tratamento ideal para os pacientes diagnosticados com Lombalgia TaiYang.    </p>
-    <p style="margin-left: 10px; margin-right: 5px; font-size:.8em;">
+    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
       ¹ Artigo - Revista Brasileira de Medicina Chinesa - Ano XI n° 34 pg.:26 a 28, ² Lucas Rocha Fiori Sobreira, Carla A. da S. M. Guimarães, Leandro César Ramos da Costa, Natália Paixão Santos da Silva, Patrique Machado de Sá - Formados em Acupuntura Pelo Centro Universitário Celso Lisboa; ³ Deborah Vieira Machado - Graduanda em Fisioterapia do Centro Universitário Celso Lisboa. 
     </p>     
           `
@@ -210,7 +210,7 @@ h5 {
 
 .postTitleVHTML {
   color: #fff;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .postTitleHover {

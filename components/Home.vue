@@ -39,53 +39,65 @@
       <div>
         <h5 class='hCincoOne'><i class="fa-solid fa-yin-yang"></i> Terapias</h5>
       </div>
-    <div class='homeTwo'>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarAcu }'><nuxt-link to="/terapias">Acupuntura Sistêmica</nuxt-link> </div>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Craniopuntura</nuxt-link> </div>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Auriculoterapia</nuxt-link> </div>
-              <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'><nuxt-link to="/terapias">Ventosaterapia</nuxt-link> </div>
-              <!--
+      <div class='homeTwo'>
+        <div class='homeTwoDot' :class='{ selectTitle: aplicarAcu }'>
+          <nuxt-link to="/terapias">Acupuntura Sistêmica</nuxt-link>
+        </div>
+        <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'>
+          <nuxt-link to="/terapias">Craniopuntura</nuxt-link>
+        </div>
+        <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'>
+          <nuxt-link to="/terapias">Auriculoterapia</nuxt-link>
+        </div>
+        <div class='homeTwoDot' :class='{ selectTitle: aplicarCran }'>
+          <nuxt-link to="/terapias">Ventosaterapia</nuxt-link>
+        </div>
+        <!--
               // <div @click='acupuntura()' class='homeTwoDot' :class='{ selectTitle: aplicarAcu }'>Acupuntura Sistêmica</div>
               // <div @click='craniopuntura()' class='homeTwoDot' :class='{ selectTitle: aplicarCran }'>Craniopuntura</div>
               // <div @click='auriculo()' class='homeTwoDot' :class='{ selectTitle: aplicarAur }'>Auriculoterapia</div>
               // <div @click='ventosa()' class='homeTwoDot' :class='{ selectTitle: aplicarVen }'>Ventosaterapia</div>
               -->
-            </div>
-                        <br>
-<div>
+      </div>
+      <br>
+      <div>
         <h5 class='hCincoTwo'>Indicações</h5>
       </div>
       <div class='main-l-trat'>
-              <h4 @click='ansiedade()' class='dot-index' :class='{ selectTitleHover: aplicar }'  v-html='rAnsiedade'></h4>
-              <h4 @click='depressao()' class='dot-index' :class='{ selectTitleHover: aplicarTwo }' v-html='rDepressao'></h4>
-              <h4 @click='estresse()' class='dot-index' :class='{ selectTitleHover: aplicarFive }' v-html='rEstresse'></h4>
-              <h4 @click='cervicalgia()' class='dot-index' :class='{ selectTitleHover: aplicarTree }' v-html='rCervicalgia'></h4>
-              <h4 @click='lombalgia()' class='dot-index' :class='{ selectTitleHover: aplicarFour }' v-html='rLombalgia'></h4>
-              <h4 @click='enxaqueca()' class='dot-index' :class='{ selectTitleHover: aplicarSix }' v-html='rEnxaqueca'></h4>
-              <h4 @click='cefaleia()' class='dot-index' :class='{ selectTitleHover: aplicarSeven }' v-html='rCefaleia'></h4>
-              <h4 @click='baixaImunidade()' class='dot-index' :class='{ selectTitleHover: aplicarEight }' v-html='rBaixaImunidade'></h4>
-              <h4 @click='burnOut()' class='dot-index' :class='{ selectTitleHover: aplicarNine }' v-html='rBurnout'></h4>
-              <h4 @click='laringite()' class='dot-index' :class='{ selectTitleHover: aplicarTen }' v-html='rLaringite'></h4>
-              <h4 @click='insonia()' class='dot-index' :class='{ selectTitleHover: aplicarEleven }' v-html='rInsonia'></h4>
-              <h4 @click='zumbido()' class='dot-index' :class='{ selectTitleHover: aplicarTwelve }' v-html='rZumbido'></h4>
-              <h4 @click='labirintite()' class='dot-index' :class='{ selectTitleHover: aplicarThirteen }' v-html='rLabirintite'></h4>
-              <h4 @click='sinusite()' class='dot-index' :class='{ selectTitleHover: aplicarFourteen }' v-html='rSinusite'></h4>
-              <!--Distúrbios ginecológicos
+        <h4 @click='ansiedade()' class='dot-index' :class='{ selectTitleHover: aplicar }' v-html='rAnsiedade'></h4>
+        <h4 @click='depressao()' class='dot-index' :class='{ selectTitleHover: aplicarTwo }' v-html='rDepressao'></h4>
+        <h4 @click='estresse()' class='dot-index' :class='{ selectTitleHover: aplicarFive }' v-html='rEstresse'></h4>
+        <h4 @click='cervicalgia()' class='dot-index' :class='{ selectTitleHover: aplicarTree }' v-html='rCervicalgia'>
+        </h4>
+        <h4 @click='lombalgia()' class='dot-index' :class='{ selectTitleHover: aplicarFour }' v-html='rLombalgia'></h4>
+        <h4 @click='enxaqueca()' class='dot-index' :class='{ selectTitleHover: aplicarSix }' v-html='rEnxaqueca'></h4>
+        <h4 @click='cefaleia()' class='dot-index' :class='{ selectTitleHover: aplicarSeven }' v-html='rCefaleia'></h4>
+        <h4 @click='baixaImunidade()' class='dot-index' :class='{ selectTitleHover: aplicarEight }'
+          v-html='rBaixaImunidade'></h4>
+        <h4 @click='burnOut()' class='dot-index' :class='{ selectTitleHover: aplicarNine }' v-html='rBurnout'></h4>
+        <h4 @click='laringite()' class='dot-index' :class='{ selectTitleHover: aplicarTen }' v-html='rLaringite'></h4>
+        <h4 @click='insonia()' class='dot-index' :class='{ selectTitleHover: aplicarEleven }' v-html='rInsonia'></h4>
+        <h4 @click='zumbido()' class='dot-index' :class='{ selectTitleHover: aplicarTwelve }' v-html='rZumbido'></h4>
+        <h4 @click='labirintite()' class='dot-index' :class='{ selectTitleHover: aplicarThirteen }'
+          v-html='rLabirintite'></h4>
+        <h4 @click='sinusite()' class='dot-index' :class='{ selectTitleHover: aplicarFourteen }' v-html='rSinusite'>
+        </h4>
+        <!--Distúrbios ginecológicos
                   Distúrbios gastrointestinais
                   Distúrbios alérgicos
                   Distúrbios imunológicos -->
-            </div>
-    </div>
- <div id='main-white'><br>
-        <h3 style='text-transform: uppercase;'>INAUGURADO em <br>- 13 de Março de 2022 -</h3>
-      <br>
       </div>
-     
-     <div class='hr'></div>
+    </div>
+    <div id='main-white'><br>
+      <h3 style='text-transform: uppercase;'>INAUGURADO em <br>- 13 de Março de 2022 -</h3>
+      <br>
+    </div>
 
-      <div class='main-tree'>
+    <div class='hr'></div>
+
+    <div class='main-tree'>
       <div>
-        <h5><i class="fa-solid fa-circle-exclamation"></i> Localização</h5>
+        <h5><i class="fa-solid fa-map-location"></i> Localização</h5>
       </div>
     </div>
 
@@ -93,12 +105,14 @@
     <div class='main-four'>
       <div class='main-four-card'>
         <p>
-        Endereço: Rua da Conceição, 125 - Center Offices - sala: 1005 <br> Centro - Niterói -RJ - CEP: 24020-085        </p>
+          Endereço: Rua da Conceição, 125 - Center Offices - sala: 1005 <br> Centro - Niterói -RJ - CEP: 24020-085 </p>
       </div>
-      <iframe class='body-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.5096784506004!2d-43.12292232898354!3d-22.89456440314661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983b5d0974f89%3A0xd5dcb4494da04cac!2sDeep%20Acupuntura!5e0!3m2!1spt-BR!2sbr!4v1647055905172!5m2!1spt-BR!2sbr" style="border:0;" margin="auto;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe class='body-map'
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.5096784506004!2d-43.12292232898354!3d-22.89456440314661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983b5d0974f89%3A0xd5dcb4494da04cac!2sDeep%20Acupuntura!5e0!3m2!1spt-BR!2sbr!4v1647055905172!5m2!1spt-BR!2sbr"
+        style="border:0;" margin="auto;" allowfullscreen="" loading="lazy"></iframe>
 
     </div>
-     <div class='hr'></div>
+    <div class='hr'></div>
 
     <br>
     <!--
@@ -1045,7 +1059,7 @@ code {
 
 .main-four-card p {
   margin: 0 0 0 10px;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .body-map {
@@ -1102,7 +1116,7 @@ code {
 
 .main-five-card p {
   margin: 0 0 0 10px;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 .mini-profile {
@@ -1196,7 +1210,7 @@ transition: all .3s ease-in;
   align-items: center;
   justify-content:space-evenly;
   align-self:center;
-  font-size: .8em;
+  font-size: .9em;
   width: 95%;
   margin:auto;
   font-weight: bold;
