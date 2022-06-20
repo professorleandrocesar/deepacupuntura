@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    
     <div class='profile'>
       <img src='/img/MyLogoBold.svg' alt=''>
 
@@ -8,6 +8,7 @@
         <h1>Deep Acupuntura</h1>
         <h4>| Clinica de Medicina Chinesa | </h4>
       </div>
+    
     </div>
 
     <div class='main-one'>
@@ -124,9 +125,14 @@
     <br>
 
   </div>
+    
 </template>
 <script>
 export default {
+  transition: {
+    name: 'page', 
+    mode: 'ease-in'
+  },
   head: {
     title: 'Deep Acupuntura',
     htmlAttrs: {
@@ -1193,6 +1199,7 @@ transition: all .3s ease-in;
 .selectTitleHover {
   color: #fff;
   border: solid .5px #e23a28;
+  opacity: 1s;
 }
 
 .selectTitleHover span {
@@ -1241,6 +1248,7 @@ color: #dbd1d1;
   border: solid .3px #e23a2840;
   margin: 30px auto 0px auto;
 }
+
 
 @media only screen and (max-width: 369px) {}
 </style>

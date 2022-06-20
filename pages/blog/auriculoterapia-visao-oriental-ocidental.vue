@@ -3,8 +3,7 @@
   <NavTopTwo/>
   <NavBottom/>
 
-    <div id="main">
-
+<div class='anima'>
       <!-- Início Cabeçalho principal da página -->
       <h1>{{ postTitle }}</h1>
       <h4>{{ subPostTitle }}</h4>

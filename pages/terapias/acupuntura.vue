@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='anima'>
 
     <div class='main-four'>
 

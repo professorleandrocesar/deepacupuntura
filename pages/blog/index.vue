@@ -1,9 +1,9 @@
 <template>
-<div id='app'>
+<div>
   <NavTopTwo/>
   <NavBottom/>
 
-  <div class='main-tree'>
+  <div class='main-tree anima'>
       <div>
         <h5><i class="fa-solid fa-blog"></i> Blog <br><br> TCC e Artigos</h5>
       </div>
@@ -11,7 +11,7 @@
 
       
         <div class='years'>
-            <h4 @click='postOne' class='postTitle' :class='{ postTitleHover: aplicar }'>
+            <h4 @click='postOne' class='postTitle' :class='{anima: aplicar, postTitleHover: aplicar }'>
               <i class="fas fa-chevron-right"></i> A Acupuntura no Tratamento da Lombalgia Tai Yang: Revisão Bibliográfica
             </h4>
             <div v-html='outputPostOne'></div>
