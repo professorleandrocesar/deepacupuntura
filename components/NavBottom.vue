@@ -31,6 +31,11 @@ i {
   font-size: 1.1em;
 }
 
+/*
+  background-color: #6a0707;
+  background-color: #860d0d;
+*/
+
 .nav-bottom {
   position: fixed;
   bottom: .1px;
