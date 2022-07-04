@@ -21,13 +21,24 @@
                 Ocidental.
             </h4>
             <div v-html='outputPostTwo'></div>
-            <!--    <h4 @click='umSete' class='postTitle' :class='{ postTitleHover: aplicarTree }'>| 2017 |</h4>
-            <h4 @click='umUm' class='postTitle' :class='{ postTitleHover: aplicarFour }'>| 2011 |</h4>
-            <h4 @click='zeroOito' class='postTitle' :class='{ postTitleHover: aplicarFive }'>| 2008 |</h4>
-            <h4 @click='zeroCinco' class='postTitle' :class='{ postTitleHover: aplicarSix }'>| 2005 |</h4>
-            <h4 @click='oitoSeis' class='postTitle' :class='{ postTitleHover: aplicarSeven }'>| 1986 |</h4>
-        -->
+
         </div>
+<!--
+        <div class='main-tree'>
+            <div>
+                <h5>Posts</h5>
+            </div>
+        </div>
+
+        <div class='years'>
+            <h4 @click='postTree' class='postTitle' :class='{ postTitleHover: aplicarTree }'>
+                <i class="fas fa-chevron-right"></i> A Teoria Yin-Yang
+            </h4>
+            <div v-html='outputPostTree'></div>
+
+        </div>
+        -->
+        <br>
         <br>
         <br>
 
@@ -39,6 +50,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
     head: {
         title: 'Blog | Deep Acupuntura',
         meta: [
@@ -66,9 +78,9 @@ export default {
             outputPostTwo: '',
             outputPostOne: `
           <p class='post'>
-            A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prática da moxabustão, acupuntura e 
-            da farmacologia natural cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de 
-            conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias 
+            A Medicina Tradicional Chinesa (MTC) tem sua <b>origem</b> das combinações da prática da <b>moxabustão, acupuntura e 
+            da farmacologia natural</b> cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de 
+            <b>conhecimentos teórico-empíricos</b> da MTC através da aplicação de <b>agulhas e de moxas</b>. Existem diversas teorias 
             na MTC para podermos...
 
             <a class='' href='/blog/lombalgia-tai-yang'> Veja mais</a>
@@ -90,15 +102,16 @@ export default {
                 this.aplicarFive = false,
                 this.aplicarSix = false,
                 this.aplicarSeven = false,
+                this.outputPostTree = ``,
                 this.outputPostTwo = ``,
                 this.outputPostOne = `
-          <p class='post'>
-            A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prática da moxabustão, acupuntura e 
-            da farmacologia natural cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de 
-            conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias 
+           <p class='post'>
+            A Medicina Tradicional Chinesa (MTC) tem sua <b>origem</b> das combinações da prática da <b>moxabustão, acupuntura e 
+            da farmacologia natural</b> cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de 
+            <b>conhecimentos teórico-empíricos</b> da MTC através da aplicação de <b>agulhas e de moxas</b>. Existem diversas teorias 
             na MTC para podermos...
 
-            <a href='/blog/lombalgia-tai-yang'> Veja mais</a>
+            <a class='' href='/blog/lombalgia-tai-yang'> Veja mais</a>
             
           </p>
           <br>
@@ -114,11 +127,12 @@ export default {
                 this.aplicarSix = false,
                 this.aplicarSeven = false,
                 this.outputPostOne = ``,
+                this.outputPosttree = ``,
                 this.outputPostTwo = `
           <p class='post'>
-            Segundo Oleson (2003) a auriculoterapia é uma modalidade
-            de saúde em que a superfície externa da orelha, ou aurícula, é
-            estimulada para aliviar condições patológicas em outras partes
+            Segundo Oleson (2003) a <b>auriculoterapia</b> é uma modalidade
+            de saúde em que a <b>superfície externa da orelha, ou aurícula, é
+            estimulada para aliviar condições patológicas</b> em outras partes
             do corpo, isso embora, originalmente baseado sobre a antiga
             prática chinesa de acupuntura, a correspondência somatotópica
             de partes do corpo a partes específicas da orelha foi desenvolvido pela...
@@ -129,7 +143,7 @@ export default {
           <br>
           `
         },
-        umSete() {
+        postTree() {
             this.aplicar = false,
                 this.aplicarTwo = false,
                 this.aplicarTree = true,
@@ -137,10 +151,14 @@ export default {
                 this.aplicarFive = false,
                 this.aplicarSix = false,
                 this.aplicarSeven = false,
-                this.outputPostOne =
-                `
-          <p>
+                this.outputPostOne = "",
+                this.outputPostTwo = "",
+                this.outputPostTree =
+                ` <p class='post'>
+            fdfdf
 
+            <a href='/blog/teoria-yin-yang'> Veja mais</a>
+            
           </p>
           <br>
           `
@@ -237,7 +255,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
+b {
+}
+a {
+
+}
+
+p {
+  line-height: 2;
+}
+
 .years {
     display: flex;
     flex-flow: column wrap;
@@ -245,7 +273,8 @@ export default {
     justify-content: space-end;
     align-self: center;
     margin: 0 10px 0 10px;
-    font-size: .8em;
+    font-size: .9em;
+  color: #fff;
 }
 
 .years a {

@@ -31,6 +31,7 @@
 </template>
 <script>
 export default {
+  scrollToTop: true,
   head: {
     title: 'Auriculoterapia| Terapias | Leandro Cesar',
     meta: [

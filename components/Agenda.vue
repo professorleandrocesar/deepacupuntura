@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-  
+  scrollToTop: true,
   data() {
       return {
           aplicar : true,

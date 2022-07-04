@@ -28,6 +28,7 @@
 </template>
 <script>
 export default {
+  scrollToTop: true,
   head: {
     title: 'Acupuntura| Terapias | Leandro Cesar',
     meta: [

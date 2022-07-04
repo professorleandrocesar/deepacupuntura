@@ -27,6 +27,7 @@
 </template>
 <script>
 export default {
+  scrollToTop: true,
   head: {
     title: 'Ventosaterapia| Terapias | Leandro Cesar',
     meta: [

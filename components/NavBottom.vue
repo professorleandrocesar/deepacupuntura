@@ -75,6 +75,10 @@ i {
   margin: 10px 0 0px 0;
 }
 
+.nav-bottom a:hover i {
+  color: #ffffff;
+}
+
 .nav-bottom a.nuxt-link-exact-active {
   color: #fff;
 }

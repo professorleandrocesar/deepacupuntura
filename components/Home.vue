@@ -129,6 +129,7 @@
 </template>
 <script>
 export default {
+  scrollToTop: true,
   transition: {
     name: 'page', 
     mode: 'ease-in'
@@ -916,6 +917,10 @@ code {
   margin: 13px 0 -5px -10px;
   font-size: 1.5em;
   color: #fff;
+ text-shadow: -2px 2px 5px #ffffff70,
+  -2px -2px 5px #ffffff70,
+  2px 2px 5px #ffffff70,
+  2px -2px 5px #ffffff70;
 }
 
 .profile h4 {

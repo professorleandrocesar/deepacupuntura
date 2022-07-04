@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
     head: {
     title: 'Horários | Deep Acupuntura',
     meta: [

@@ -130,6 +130,7 @@
 </template>
 <script>
 export default {
+  scrollToTop: true,
   head: {
     title: 'Sobre | Deep Acupuntura',
     htmlAttrs: {
@@ -728,7 +729,7 @@ code {
 .dateYear {
   color: #d8d8d880;
   cursor: pointer;
- font-size: 1.3em;
+ font-size: 1.2em;
  }
 
  .dateYearHover {
@@ -736,10 +737,11 @@ code {
  }
 .years {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-end;
   align-self: center;
+  overflow-x: auto;
 }
 
 .years a {

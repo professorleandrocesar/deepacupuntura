@@ -218,6 +218,7 @@
 
 <script>
 export default {
+scrollToTop: true,
     head: {
     title: 'Pontos | Deep Acupuntura',
     meta: [

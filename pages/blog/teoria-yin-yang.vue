@@ -1,293 +1,288 @@
 <template>
-<div id='app'>
-
-  <NavTopTwo/>
+<div>
+<NavTopTwo/>
   <NavBottom/>
 
-      <div id="main">
-        <div class='years'>
-            <a @click="$router.go(-1)"><i class="fas fasi-post main-l fa-arrow-left"></i> Voltar</a>
-        </div>  
-        <div class="main-c"><i class="fas fasi fa-file-invoice"></i></div>
-          <h2>  
-              A Teoria Yin-Yang
-          </h2>
-          <p class='main-r autors'>
-            DA COSTA, Leandro C. R.¹
-
-          </p>
-        <div class='years'>
-            <h4 @click='articleResume' class='postTitle' :class='{ postTitleHover: aplicar }'>
-            Resumo
-            </h4>
-            <h4 @click='postTwo' class='postTitle' :class='{ postTitleHover: aplicarTwo }'>
+  <div class='anima'>
+  
+    <!-- Início Cabeçalho principal da página -->
+    <h1>{{postTitle}}</h1><h4>{{subPostTitle}}</h4>
+    <h5 class="main-r"> 
+    Autor: {{autorOne}}
+      <br>
+      Criado: <i class="fa-solid fa-calendar-day"></i> {{date}} <i class="fa-solid fa-clock"></i> {{hours}}
+      
+    </h5>
+    <!-- Fim Cabeçalho principal da página -->
+    <div class='details'>
+      <h4 @click='articleIntroducao()' class='postTitle' :class='{ postTitleHover: aplicar }'>
               Introdução
-            </h4>
-            <div v-html='outputPostOne'></div>
-            <div v-html='outputPostTwo'></div>
-        <!--    <h4 @click='umSete' class='postTitle' :class='{ postTitleHover: aplicarTree }'>| 2017 |</h4>
-            <h4 @click='umUm' class='postTitle' :class='{ postTitleHover: aplicarFour }'>| 2011 |</h4>
-            <h4 @click='zeroOito' class='postTitle' :class='{ postTitleHover: aplicarFive }'>| 2008 |</h4>
-            <h4 @click='zeroCinco' class='postTitle' :class='{ postTitleHover: aplicarSix }'>| 2005 |</h4>
-            <h4 @click='oitoSeis' class='postTitle' :class='{ postTitleHover: aplicarSeven }'>| 1986 |</h4>
-        -->    
-        </div>
-        <br>
-      </div>
+    </h4>
+      <h4 @click='articleConceitos()' class='postTitle' :class='{ postTitleHover: aplicarTwo }'>
+              Conceitos
+    </h4>
+      <h4 @click='articleEstacoes()' class='postTitle' :class='{ postTitleHover: aplicarTree }'>
+              Estações
+    </h4>
+      <h4 @click='articleOrgaos()' class='postTitle' :class='{ postTitleHover: aplicarFour }'>
+              Orgãos/Vísceras
+    </h4>
+    </div>  
+    <div class='postTitleVHTML' v-html='outputPostOne'></div>
 
-        <!-- <div>
-          <span class="nav-in dois-vinte-um">2021</span> | <span class="nav-in dois-vinte">2022</span>
-        </div> -->
-    </div>
+    <br>
+    <br>
+  </div>
+</div>
 </template>
 
 <script>
 export default {
-  head: {
-    title: 'A Acupuntura no Tratamento da Lombalgia Tai Yang: Revisão Bibliográfica | Posts | Deep Acupuntura',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: ''
-      },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content: ''
-      }
-    ]
+  scrollToTop: true,
+head() {
+  return {
+      title: [this.postTitle + this.subPostTitle + ' |' + this.area + ' |' + this.autorOne],
+        meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: [this.descript]
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content: [this.key]
+        }
+      ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/img/favicon.svg' },
+      { rel: 'apple-touch-icon', size: '180x180', href: '/img/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', size: '32x32', href: '/img/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', size: '16x16', href: '/img/favicon-16x16.png' },
+      { rel: 'apple-touch-icon', size: '180x180', href: '/img/apple-touch-icon.png' },
+      { rel: 'manifest', href: '/img/site.webmanifest' },
+      { rel: 'mask-icon', href: '/img/safari-pinned-tab.svg', color: '#002937' }
+    ],       
+    }
   },
   data() {
       return {
-          aplicar : true,
-          aplicarTwo : '',
-          aplicarTree : '',
-          aplicarFour : '',
-          aplicarFive : '',
-          aplicarSix : '',
-          aplicarSeven : '',
-          outputPostOne: `
-          <h4>Resumo</h4>
-          <p class='post'>
-            A Teoria Yin-yang é o principal conceito aplicado à Medicina Tradicional Chinesa (MTC). 
-            Teoria antiga que é, é conhecida em qualquer canto do mundo, até você provavelmente já ouviu falar;
-            Yin-yang, fala de ciclos, de constância, de fases (mundanças), alternâncias etc. Tal conceito é simples, sendo que ao mesmo tempo profundo, 
-            podemos dizer que aspectos da fisiologia, da patologia e do tratamento com base na medicina chinesa, podem, essencialmente, ser reduzidos
-            a Yin-Yang².
-            <br>
-          </p>
-          <br>
-          
+        postTitle: 'A Teoria Yin-Yang¹',
+        subPostTitle: '', /* deixar com um espaço inicial */
+        area: ' Acupuntura | Blog', /* deixar com um espaço inicial */
+        autorOne: ' Leandro Cesar¹', /* deixar com um espaço inicial */
+        autorTwo: '', /* deixar com um espaço inicial */
+        autorTree: '', /* deixar com um espaço inicial */
+        autorFour: '', /* deixar com um espaço inicial */
+        autorFive: '', /* deixar com um espaço inicial */
+        autorSix: '',  /* deixar com um espaço inicial */
+        descript: '', /* descrição de no máximo 200 caracteres */
+        key: ', , ', /* colocar 3 keywords */
+        date: '06/06/2022',
+        hours: '07:00',
+        oneReeditionDate: '',
+        oneReeditionHours: '',
+        aplicar : true,
+        aplicarTwo : '',
+        aplicarRef : '',
+        aplicarTree : '',
+        aplicarFour : '',
+        aplicarFive : '',
+        aplicarSix : '',
+        aplicarSeven : '',
+        outputPostOne: `
+           <!-- Início do conteúdo principal -->   
+          <h4 style="margin-left: 10px; margin-right: 5px;">
+        Introdução
+      </h4>   
+    <p style="margin-left: 10px; margin-right: 5px;">
+      A Medicina Tradicional Chinesa (MTC) tem sua <b>origem</b> das combinações da prática da <b>moxabustão, acupuntura e da 
+      farmacologia natural</b> cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de <b>conhecimentos 
+      teórico-empíricos</b> da MTC através da aplicação de <b>agulhas e de moxas</b>. Existem diversas <b>teorias na MTC</b> para podermos tratar
+       patologias, como a <b>teoria dos 5 Elementos, Princípio de Geração (Ciclo Sheng), Princípio de Controle (Dominância – Ciclo KE), 
+       a teoria Yin/Yang, teoria dos meridianos (canais de energia) e a teoria dos canais unitários</b>. A dor lombar é o principal 
+       problema de saúde entre os países ocidentais industrializados e uma das principais causas de despesas médicas, ausência 
+       e incapacidade. Existem 4 métodos <b>diagnósticos na MTC</b> que são a <b>inspeção, audição e olfação, anamnese e palpação de pulso 
+       e palpação</b>. A <b>lombalgia TaiYang</b> precisa ser diferenciada da lombalgia da protusão e hérnia discais lombar, esta apresenta 
+       perda de força muscular, alteração da sensibilidade, hipotrofia dos músculos da perna e sinal positivo no Teste de Lasègue. 
+       Pela <b>literatura</b> relacionada à lombalgia Tai Yang, <b>houve evidência consistente da relevância do tratamento da acupuntura 
+       para tal patologia</b>, porém é sugestivo estudos mais aprofundados sobre o tema. <b>Objetivos:</b> <i> identificar e diferenciar os 
+       diversos tipos de lombalgias dentro da visão ocidental e oriental e assim elaborar o tratamento ideal para os pacientes 
+       diagnosticados com Lombalgia TaiYang.</i>
+    </p>
+    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
+      ¹ TCC do Curso de Pós-graduação em Acupuntura do Centro Universitário Celso Lisboa ² FIORI; PAIXÃO; GUIMARÃES; DA COSTA; MACHADO, pós-graduandos do Curso de Acupuntura do Centro Universitário 
+             Celso Lisboa; ³ DE MORAES, Cláudio, professor e orientador. 
+    </p>         
           `,
-          outputPostTwo: `
-          <p class='main-l autors'> 
-             ¹ Pós-graduação (Especialização) em Acupuntura do Centro Universitário Celso Lisboa - 2022; Graduação em Educação física - Univesidade Salgado de Oliveira - 2008
-             <br>
-             ² Maciocia
-          </p>
-          <br>
-          <br>
-          <br>
-          `
-          
-          ,
       }
   },
   methods: {
-      articleResume() {
+      articleIntroducao() {
           this.aplicar = true,
           this.aplicarTwo = false,
-          this.aplicarTree = false,
           this.aplicarFour = false,
-          this.aplicarFive = false,
-          this.aplicarSix = false,
-          this.aplicarSeven = false,
+          this.aplicarTree = false,
+          this.aplicarRef = false,
           this.outputPostOne = `
-          <p class='post'>
-            A Teoria Yin-yang é o principal conceito aplicado à Medicina Tradicional Chinesa (MTC). 
-            Teoria antiga que é, é conhecida em qualquer canto do mundo, até você provavelmente já ouviu falar;
-            Yin-yang, fala de ciclos, de constância, de fases (mundanças), alternâncias etc. Tal conceito é simples, sendo que ao mesmo tempo profundo, 
-            podemos dizer que aspectos da fisiologia, da patologia e do tratamento com base na medicina chinesa, podem, essencialmente, ser reduzidos
-            a Yin-Yang².
-            <br>
-            Como primeiro 'post' deste despretencioso 'blog' para divulgação de conhecimentos mais aprofundados, no universo da MTC, não teria como deixar de
-            
-          </p>
-          <br>
-          `,
-          this.outputPostTwo= `
-          <p class='main-l autors'> 
-             ¹ Pós-graduação (Especialização) em Acupuntura do Centro Universitário Celso Lisboa - 2022; Graduação em Educação física - Univesidade Salgado de Oliveira - 2008
-             <br>
-             ² Maciocia
-          </p>
-          <br>
-          <br>
-          <br>
-        `
-      },
-      postTwo(){
-        this.aplicar = false,
+            <!-- Início do conteúdo principal -->   
+          <h4 style="margin-left: 10px; margin-right: 5px;">
+        Introdução
+      </h4>   
+    <p style="margin-left: 10px; margin-right: 5px;">
+      A Medicina Tradicional Chinesa (MTC) tem sua <b>origem</b> das combinações da prática da <b>moxabustão, acupuntura e da 
+      farmacologia natural</b> cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de <b>conhecimentos 
+      teórico-empíricos</b> da MTC através da aplicação de <b>agulhas e de moxas</b>. Existem diversas <b>teorias na MTC</b> para podermos tratar
+       patologias, como a <b>teoria dos 5 Elementos, Princípio de Geração (Ciclo Sheng), Princípio de Controle (Dominância – Ciclo KE), 
+       a teoria Yin/Yang, teoria dos meridianos (canais de energia) e a teoria dos canais unitários</b>. A dor lombar é o principal 
+       problema de saúde entre os países ocidentais industrializados e uma das principais causas de despesas médicas, ausência 
+       e incapacidade. Existem 4 métodos <b>diagnósticos na MTC</b> que são a <b>inspeção, audição e olfação, anamnese e palpação de pulso 
+       e palpação</b>. A <b>lombalgia TaiYang</b> precisa ser diferenciada da lombalgia da protusão e hérnia discais lombar, esta apresenta 
+       perda de força muscular, alteração da sensibilidade, hipotrofia dos músculos da perna e sinal positivo no Teste de Lasègue. 
+       Pela <b>literatura</b> relacionada à lombalgia Tai Yang, <b>houve evidência consistente da relevância do tratamento da acupuntura 
+       para tal patologia</b>, porém é sugestivo estudos mais aprofundados sobre o tema. <b>Objetivos:</b> <i> identificar e diferenciar os 
+       diversos tipos de lombalgias dentro da visão ocidental e oriental e assim elaborar o tratamento ideal para os pacientes 
+       diagnosticados com Lombalgia TaiYang.</i>
+    </p>
+    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
+      ¹ TCC do Curso de Pós-graduação em Acupuntura do Centro Universitário Celso Lisboa ² FIORI; PAIXÃO; GUIMARÃES; DA COSTA; MACHADO, pós-graduandos do Curso de Acupuntura do Centro Universitário 
+             Celso Lisboa; ³ DE MORAES, Cláudio, professor e orientador. 
+    </p>  
+          `
+},
+      articleConceitos() {
+          this.aplicar = false,
           this.aplicarTwo = true,
           this.aplicarTree = false,
-          this.aplicarFour = false,
-          this.aplicarFive = false,
-          this.aplicarSix = false,
-          this.aplicarSeven = false,
+          this.aplicarRef = false,
           this.outputPostOne = `
-          <p class='post'>
-          
-          </p>
-            
-          `,
-          this.outputPostTwo= `
-          <p class='main-l autors'> 
-             ¹ Pós-graduação (Especialização) em Acupuntura do Centro Universitário Celso Lisboa - 2022; Graduação em Educação física - Univesidade Salgado de Oliveira - 2008
-          </p>
-          <br>
-          <br>
-          <br>
-        `
-      },
-      umSete() {
-        this.aplicar = false,
+          <div>
+      <h4 style="margin-left: 10px; margin-right: 5px;">
+        Anatomia
+      </h4>
+    </div>
+    <p style="margin-left: 10px; margin-right: 5px;">
+      O joelho é uma articulação sinovial com estruturas bem complexas. É formada pelos ossos do 
+      fêmur, tíbia, e patela. Conectados pelos muitos componentes articulares para garantir sua 
+      movimentação e estabilidade, permitindo sustentar grandes cargas para a mobilidade, necessárias
+      para as atividades locomotoras do dia-a-dia.<sup> 2</sup>.
+    </p>
+    <div>
+      <img src="/img/articulacao-do-joelho.png" alt="Foto de uma articulação do joelho" style="margin-left: 10px; height:400px;">
+      <br>
+      <sub style="margin-left: 10px; margin-right: 5px;">Corte sagital do Joelho direito (Rasch e Burke, 1986 p.340) <sup> 3</sup></sub>    
+    </div>
+    <p>
+    </p>
+    
+    <!-- Fim do Conteúdo principal da página -->
+          `
+},
+      articleEstacoes() {
+          this.aplicar = false,
+          this.aplicarRef = true,
           this.aplicarTwo = false,
+          this.aplicarFour = false,
           this.aplicarTree = true,
-          this.aplicarFour = false,
-          this.aplicarFive = false,
-          this.aplicarSix = false,
-          this.aplicarSeven = false,
-          this.outputPostOne = 
+          this.outputPostOne = `
+      <h4 style="margin-left: 10px; margin-right: 5px;">Referências Bibliográficas:</h4>
+      <p style="margin-left: 10px; margin-right: 5px;">
+        1) (Macnicol, 2002)
+        <br>
+        2) Biomecânica Básica
+        <br>
+        3) Rasch e Burke    
+      </p>
           `
-          <p>
-
-          </p>
-          <br>
-          `
-      },
-      umUm(){
-        this.aplicar = false,
+          
+},
+      articleOrgaos() {
+          this.aplicar = false,
+          this.aplicarRef = true,
           this.aplicarTwo = false,
-          this.aplicarTree = false,
           this.aplicarFour = true,
-          this.aplicarFive = false,
-          this.aplicarSix = false,
-          this.aplicarSeven = false,
-          this.outputPostOne =
-          `
-          <h4>2011:</h4>
-        <h4 style="text-align: left;">Novembro</h4>
-          <ul class="main-l">
-            <li>
-              Término do curso de Formação de Instrutor de Krav-Maga - Bukan School of Krav-maga - Rio de Janeiro - RJ;
-            </li>
-          </ul>
-          <br>
-        <h4 style="text-align: left;">Março</h4>
-          <ul class="main-l">
-            <li>
-              Início do curso de Formação de Instrutor de Krav-Maga - Bukan School of Krav-maga - Rio de Janeiro - RJ;
-            </li>
-          </ul>
-          <br>
-          <br>
-          `
-      },
-      zeroOito(){
-        this.aplicar = false,
-          this.aplicarTwo = false,
           this.aplicarTree = false,
-          this.aplicarFour = false,
-          this.aplicarFive = true,
-          this.aplicarSix = false,
-          this.aplicarSeven = false,
-          this.outputPostOne =
+          this.outputPostOne = `
+      <h4 style="margin-left: 10px; margin-right: 5px;">Referências Bibliográficas:</h4>
+      <p style="margin-left: 10px; margin-right: 5px;">
+        1) (Macnicol, 2002)
+        <br>
+        2) Biomecânica Básica
+        <br>
+        3) Rasch e Burke    
+      </p>
           `
-          <h4>2008:</h4>
-        <h4 style="text-align: left;">Fevereiro</h4>
-          <ul class="main-l">
-            <li>
-              Término do curso de Graduação em Educação Física - Universidade Salgado de Oliveita - UNIVERSO;
-            </li>
-          </ul>
-          <br>
-          `
-      },
-      zeroCinco() {
-        this.aplicar = false,
-          this.aplicarTwo = false,
-          this.aplicarTree = false,
-          this.aplicarFour = false,
-          this.aplicarFive = false,
-          this.aplicarSix = true,
-          this.aplicarSeven = false,
-          this.outputPostOne =
-          `
-          <h4>2005:</h4>
-        <h4 style="text-align: left;">Fevereiro</h4>
-          <ul class="main-l">
-            <li>
-              Início do curso de Graduação em Educação Física - Universidade Salgado de Oliveita - UNIVERSO;
-            </li>
-          </ul>
-          <br>
-          `
-      },
-      oitoSeis () {
-        this.aplicar = false,
-          this.aplicarTwo = false,
-          this.aplicarTree = false,
-          this.aplicarFour = false,
-          this.aplicarFive = false,
-          this.aplicarSix = false,
-          this.aplicarSeven = true,
-          this.outputPostOne = 
-          `
-          <h4>1986:</h4>
-        <h4 style="text-align: left;">Outubro</h4>
-          <ul class="main-l">
-            <li>
-              Nascimento no dia 08 - Neves - São Gonçalo - RJ;
-            </li>
-          </ul>
-          <br>
-          `
-      }
-  }
-} 
+          
+}
+}
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-.years {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content:space-end;  
-    align-self: center;
-}
-.years h4 {
-  padding: 5px 10px;
-  cursor: pointer;
+<style scoped>
+p {
+  line-height: 2;
 }
 
-.postTitle {
-  color: #d8d8d880;
-}
-
-.postTitleHover {
+b {
   color: #e23a28;
 }
 
-.years a {
-   color: #d8d8d880;
- }
-
-@media only screen and (max-width: 820px) {
- .years h4, .years a{
-   font-size: 1.2em;
- }
+h1 {
+  font-size: 1.1em;
+  margin: 20px 0 0 10px;
+  line-height: 1.1;
+  color: #fff;
 }
 
+h4 {
+  font-size: 1em;
+  margin: 5px 0 0 10px;
+  cursor: pointer;  color: #fff;
+}
+
+h5 {
+  margin: 0px 10px 20px 0px;
+  text-align: right;
+    color: #dbd1d1;
+}
+
+.details {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-end;
+  align-self: center;
+  overflow-x: auto;
+
+}
+
+.details h4 {
+  padding: 5px 10px;
+
+}
+
+.postTitle {
+  color: #d8d8d890;
+  font-size: .9em;
+}
+
+.postTitleVHTML {
+  color: #fff;
+  font-size: .9em;
+}
+
+.postTitleHover {
+  font-size: 1em;
+  color: #e23a28;
+}
+
+.details a {
+  color: #ffffff90;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  font-size: .9em;
+  margin: 5px 0 0 10px;
+}
 </style>

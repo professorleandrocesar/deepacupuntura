@@ -23,7 +23,7 @@
       <!-- Fim Cabeçalho principal da página -->
       <div class='details'>
         <h4 @click='articleResume' class='postTitle' :class='{ postTitleHover: aplicar }'>
-          Resumo Completo
+          Introdução
         </h4>
         <a href="/auriculoterapia-visao-oriental-ocidental.pdf" download="" class='postTitle'
           :class='{ postTitleHover: aplicarTwo }'>
@@ -40,9 +40,10 @@
 
 <script>
 export default {
+  scrollToTop: true,
   head() {
     return {
-      title: [this.postTitle + this.subPostTitle + ' |' + this.area + ' |' + this.autor],
+      title: [this.postTitle + this.subPostTitle + ' |' + this.area],
       meta: [
         {
           hid: 'description',
@@ -95,11 +96,22 @@ export default {
       outputPostOne: `
            <!-- Início do conteúdo principal -->   
           <h4 style="margin-left: 10px; margin-right: 5px;">
-        Resumo completo
+        Introdução
       </h4>   
     <p style="margin-left: 10px; margin-right: 5px;">
-A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prática da moxabustão, acupuntura e da farmacologia natural cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias na MTC para podermos tratar patologias, como a teoria dos 5 Elementos, Princípio de Geração (Ciclo Sheng), Princípio de Controle (Dominância – Ciclo KE), a teoria Yin/Yang, teoria dos meridianos (canais de energia) e a teoria dos canais unitários. A dor lombar é o principal problema de saúde entre os países ocidentais industrializados e uma das principais causas de despesas médicas, ausência e incapacidade. Existem 4 métodos diagnósticos na MTC que são a inspeção, audição e olfação, anamnese e palpação de pulso e palpação. A lombalgia TaiYang precisa ser diferenciada da lombalgia da protusão e hérnia discais lombar, esta apresenta perda de força muscular, alteração da sensibilidade, hipotrofia dos músculos da perna e sinal positivo no Teste de Lasègue. Pela literatura relacionada à lombalgia Tai Yang, houve evidência consistente da relevância do tratamento da acupuntura para tal patologia, porém é sugestivo estudos mais aprofundados sobre o tema. Objetivos: identificar e diferenciar os diversos tipos de lombalgias dentro da visão ocidental e oriental e assim elaborar o tratamento ideal para os pacientes diagnosticados com Lombalgia TaiYang.    </p>
-    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
+Segundo Oleson (2003) a <b>auriculoterapia</b> é uma modalidade
+de saúde em que a <b>superfície externa da orelha, ou aurícula, é
+estimulada para aliviar condições patológicas em outras partes
+do corpo</b>, isso embora, originalmente baseado sobre a antiga
+prática chinesa de acupuntura, a <b>correspondência somatotópica
+de partes do corpo a partes específicas da orelha</b> foi desenvolvido pela primeira vez na França moderna.
+Para Dal Mas (2004), o emprego da Auriculoterapia no tratamento das patologias não é recente e no livro Nei-Ching, livro
+que data mais de cinco mil anos atrás, já haviam relatos sobre
+a auriculoterapia. Santos (2010) relata que a auriculoterapia é
+<b>praticada há milênios pelo povo chinês e também por outras
+culturas antigas, principalmente pelos egípcios</b>.
+De acordo com Oleson (2003) esta prática pode ser praticada
+por diversos profissionais da área da saúde, como: acupunturistas, dentistas, enfermeiros, osteopatas entre outros.    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
       ¹ Artigo - Revista Brasileira de Medicina Chinesa - Ano XI n° 34 pg.:26 a 28, ² Lucas Rocha Fiori Sobreira, Carla A. da S. M. Guimarães, Leandro César Ramos da Costa, Natália Paixão Santos da Silva, Patrique Machado de Sá - Formados em Acupuntura Pelo Centro Universitário Celso Lisboa; ³ Deborah Vieira Machado - Graduanda em Fisioterapia do Centro Universitário Celso Lisboa. 
     </p>         
           `,
@@ -113,13 +125,24 @@ A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prátic
         this.outputPostOne = `
            <!-- Início do conteúdo principal -->   
           <h4 style="margin-left: 10px; margin-right: 5px;">
-        Resumo completo
+        Introdução
       </h4>   
     <p style="margin-left: 10px; margin-right: 5px;">
-A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prática da moxabustão, acupuntura e da farmacologia natural cujos efeitos e resultados eram eficazes e precisos. A Acupuntura é o conjunto de conhecimentos teórico-empíricos da MTC através da aplicação de agulhas e de moxas. Existem diversas teorias na MTC para podermos tratar patologias, como a teoria dos 5 Elementos, Princípio de Geração (Ciclo Sheng), Princípio de Controle (Dominância – Ciclo KE), a teoria Yin/Yang, teoria dos meridianos (canais de energia) e a teoria dos canais unitários. A dor lombar é o principal problema de saúde entre os países ocidentais industrializados e uma das principais causas de despesas médicas, ausência e incapacidade. Existem 4 métodos diagnósticos na MTC que são a inspeção, audição e olfação, anamnese e palpação de pulso e palpação. A lombalgia TaiYang precisa ser diferenciada da lombalgia da protusão e hérnia discais lombar, esta apresenta perda de força muscular, alteração da sensibilidade, hipotrofia dos músculos da perna e sinal positivo no Teste de Lasègue. Pela literatura relacionada à lombalgia Tai Yang, houve evidência consistente da relevância do tratamento da acupuntura para tal patologia, porém é sugestivo estudos mais aprofundados sobre o tema. Objetivos: identificar e diferenciar os diversos tipos de lombalgias dentro da visão ocidental e oriental e assim elaborar o tratamento ideal para os pacientes diagnosticados com Lombalgia TaiYang.    </p>
-    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
+Segundo Oleson (2003) a <b>auriculoterapia</b> é uma modalidade
+de saúde em que a <b>superfície externa da orelha, ou aurícula, é
+estimulada para aliviar condições patológicas em outras partes
+do corpo</b>, isso embora, originalmente baseado sobre a antiga
+prática chinesa de acupuntura, a <b>correspondência somatotópica
+de partes do corpo a partes específicas da orelha</b> foi desenvolvido pela primeira vez na França moderna.
+Para Dal Mas (2004), o emprego da Auriculoterapia no tratamento das patologias não é recente e no livro Nei-Ching, livro
+que data mais de cinco mil anos atrás, já haviam relatos sobre
+a auriculoterapia. Santos (2010) relata que a auriculoterapia é
+<b>praticada há milênios pelo povo chinês e também por outras
+culturas antigas, principalmente pelos egípcios</b>.
+De acordo com Oleson (2003) esta prática pode ser praticada
+por diversos profissionais da área da saúde, como: acupunturistas, dentistas, enfermeiros, osteopatas entre outros.    <p style="margin-left: 10px; margin-right: 5px; font-size:.9em;">
       ¹ Artigo - Revista Brasileira de Medicina Chinesa - Ano XI n° 34 pg.:26 a 28, ² Lucas Rocha Fiori Sobreira, Carla A. da S. M. Guimarães, Leandro César Ramos da Costa, Natália Paixão Santos da Silva, Patrique Machado de Sá - Formados em Acupuntura Pelo Centro Universitário Celso Lisboa; ³ Deborah Vieira Machado - Graduanda em Fisioterapia do Centro Universitário Celso Lisboa. 
-    </p>     
+    </p>    
           `
     },
     articleAnatomia() {
@@ -170,6 +193,10 @@ A Medicina Tradicional Chinesa (MTC) tem sua origem das combinações da prátic
 </script>
 
 <style scoped>
+p {
+  line-height: 2;
+}
+
 h1 {
   font-size: 1.1em;
   margin: 20px 0 0 10px;
@@ -178,7 +205,7 @@ h1 {
 }
 
 h4 {
-  font-size: .9em;
+  font-size: 1em;
   margin: 5px 0 0 10px;
   cursor: pointer;  color: #fff;
 }
@@ -213,7 +240,7 @@ h5 {
 }
 
 .postTitleHover {
-  font-size: .9em;
+  font-size: 1em;
   color: #e23a28;
 }
 

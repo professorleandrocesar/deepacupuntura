@@ -66,7 +66,9 @@
   </div>
 </template>
 <script>
+
 export default {
+  scrollToTop: true,
   head: {
     title: 'Terapias | Deep Acupuntura',
     htmlAttrs: {
@@ -129,6 +131,7 @@ export default {
     }
   },
   methods: {
+    
     doisUm() {
       this.aplicar = true,
         this.aplicarTwo = false,

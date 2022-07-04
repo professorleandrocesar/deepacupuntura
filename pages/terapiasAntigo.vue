@@ -90,6 +90,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
   head: {
     title: 'Terapias | Deep Acupuntura',
     meta: [

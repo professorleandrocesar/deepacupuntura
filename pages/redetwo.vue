@@ -56,6 +56,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
   head: {
     title: 'Rede | Deep Acupuntura',
     meta: [
